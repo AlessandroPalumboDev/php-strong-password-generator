@@ -42,3 +42,8 @@ L’esercizio è suddiviso in varie milestone ed è molto importante svilupparle
   - La funzione restituisce la variabile password riempita
 - Creo una variabile che richiama la funzione
 - Richiamo la variabile della funzione in pagina
+
+### Milestone 2:
+
+- Copio e incollo la parte di logica sul nuovo file
+- Includo in index.php il file contenente la logica di generazione password
