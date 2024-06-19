@@ -33,3 +33,12 @@ L’esercizio è suddiviso in varie milestone ed è molto importante svilupparle
 ### Milestone 1:
 
 - Creo un form con un input per la scelta della lunghezza della password
+- Creo una variabile che prende il valore dell'input e lo trasforma in un numero intero
+- Creo la funzione generaPassword richiamando la variabile della lunghezza
+  - All'interno della funzione:
+  - Creo una variabile di una stringa composta da tutti i caratteri possibili nella password
+  - Creo una stringa vuota della password
+  - Creo un ciclo FOR che pusha tanti caratteri casuali presi da $caratteri quanto è alto il valore di $lunghezza
+  - La funzione restituisce la variabile password riempita
+- Creo una variabile che richiama la funzione
+- Richiamo la variabile della funzione in pagina

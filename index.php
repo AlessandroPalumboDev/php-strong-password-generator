@@ -1,3 +1,28 @@
+<?php
+// variabile che prende il valore dell'input e lo trasforma in un numero intero
+    $lunghezza = intval($_GET['lunghezza']);
+
+    // funzione genera password
+    function generaPassword($lunghezza) {
+        // stringa caratteri possibili presenti nella password
+        $caratteri = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!@#$%&/*-=_+?';
+        $password = '';
+        // ciclo che pusha caretteri in $password fino a raggiungere il valore di lunghezza
+        for ($i = 0; $i < $lunghezza; $i++) {
+            // prendo un carattere casuale all'interno della stringa
+            $carattere = $caratteri[rand(0, strlen($caratteri) -1)];
+            // pusho quel carattere all'interno della stringa inizialmente vuota
+            $password .= $carattere;
+        }
+        return $password;
+    }
+
+    // variabile che richiama la funzione
+    $passwordGenerata = generaPassword($lunghezza);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +52,8 @@
                     
                     <form action="index.php" method="GET">
                         <div class="mb-3">
-                            <label for="lunghezza_password" class="form-label">Lunghezza password:</label>
-                            <input type="range" class="form-range" min="4" max="20" id="lunghezza_password" name="lunghezza_password">
+                            <label for="lunghezza" class="form-label">Lunghezza password: <?php echo $lunghezza ?></label>
+                            <input type="range" class="form-range" min="4" max="20" id="lunghezza" name="lunghezza">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Genera</button>
@@ -36,10 +61,16 @@
 
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <h1>La tua password è:</h1> 
+                    <span><?php echo $passwordGenerata ?></span>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col text-center">
