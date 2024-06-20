@@ -1,5 +1,6 @@
 <?php
 include 'function.php';
+include 'new-function.php';
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +41,15 @@ include 'function.php';
 
                 </div>
             </div>
+            <?php if(strlen($passwordGenerata)): ?>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
                     <h1>La tua password è:</h1> 
                     <span><?php echo $passwordGenerata ?></span>
                 </div>
             </div>
+            <?php endif ?>
+            
         </div>
     </main>
 
