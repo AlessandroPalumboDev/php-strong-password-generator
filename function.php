@@ -1,6 +1,6 @@
 <?php
-// variabile che prende il valore dell'input e lo trasforma in un numero intero
-    $lunghezza = intval($_GET['lunghezza']);
+// variabile che prende il valore dell'input e lo trasforma in un numero intero, se utente simpatico genera numero casuale
+    $lunghezza = intval($_GET['lunghezza']) ? intval($_GET['lunghezza']) : rand(4, 20);
 
     // funzione genera password
     function generaPassword($lunghezza) {
